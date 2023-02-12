@@ -27,11 +27,17 @@
             justify-content: center;
         }
 
-        @media screen and (max-width:985px) {
-            #photo-company {
-                width: 90%;
-            }
+        .photo-company {
+            filter: grayscale(100%);
+            transition: 0.4s;
+        }
 
+        .photo-company:hover{
+            filter: grayscale(0%);
+            transition: 0.4s;
+        }
+        
+        @media screen and (max-width:985px) {
             .odsazeni {
                 grid-gap: 30px;
             }
@@ -69,7 +75,7 @@
                     ipsum! Tenetur, quaerat minima. Tempore praesentium accusamus nemo!</p>
             </div>
             <div class="col-12 col-md-6  d-flex justify-content-center">
-                <img id="photo-company" src="photos/company_img_bw.png">
+                <img class="photo-company" src="photos/company_img.png">
             </div>
         </div>
 
@@ -94,20 +100,7 @@
                 <p> Programátor C# </p>
             </div>
         </div>
-
     </div>
-    <script>
-        let element = document.querySelector("#photo-company");
-
-        element.addEventListener("mouseenter", function () {
-            this.src = "photos/company_img.png"
-        });
-
-        element.addEventListener("mouseleave", function () {
-            this.src = "photos/company_img_bw.png";
-        });
-    </script>
-
 </body>
 
 </html>
