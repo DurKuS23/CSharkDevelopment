@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+        }
+
+        .pozice {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media screen and (max-width:985px) {
+            #photo-company {
+                width: 90%;
+            }
+
+            .odsazeni {
+                grid-gap: 30px;
+            }
+        }
+
+        .photo-circle {
+            border: 6px solid white;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="pozice">
+        <div class="topnav" id="myTopnav">
+            <a href="#home"> CShark Development </a>
+            <a href="#home"> GitHub</a>
+            <a href="#news"> O nás</a>
+            <a href="#contact">Sociální sítě </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="row odsazeni">
+            <div class="col-12 col-md-6 text-center">
+                <h2> O Nás </h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio, recusandae
+                    reprehenderit necessitatibus magni explicabo maiores at totam soluta, cupiditate impedit consectetur
+                    ipsum! Tenetur, quaerat minima. Tempore praesentium accusamus nemo!</p>
+            </div>
+            <div class="col-12 col-md-6  d-flex justify-content-center">
+                <img id="photo-company" src="photos/company_img_bw.png">
+            </div>
+        </div>
+
+
+        <div class="row mt-5 text-center">
+            <div class="col-12 col-md-4 col-sm-6 col-lg-3">
+                <h3> Filip Dusil </h3>
+                <img src="photos/company_img_bw.png" alt="" class="photo-circle mt-3 mb-3">
+                <p> Projektový manažér </p>
+            </div>
+            <div class="col-12 col-md-4  col-sm-6 col-lg-3">
+                <h3> Daniel Nováček </h3>
+                <img src="photos/company_img_bw.png" alt="" class="photo-circle mt-3 mb-3">
+            </div>
+            <div class="col-12 col-md-4  col-sm-6 col-lg-3">
+                <h3> Šimon Dočkal </h3>
+                <img src="photos/company_img_bw.png" alt="" class="photo-circle mt-3 mb-3">
+            </div>
+            <div class="col-12 col-md-12  col-sm-6 col-lg-3">
+                <h3> Radek Novotný </h3>
+                <img src="photos/company_img_bw.png" alt="" class="photo-circle mt-3 mb-3">
+                <p> Programátor C# </p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let element = document.querySelector("#photo-company");
+
+        element.addEventListener("mouseenter", function () {
+            this.src = "photos/company_img.png"
+        });
+
+        element.addEventListener("mouseleave", function () {
+            this.src = "photos/company_img_bw.png";
+        });
+    </script>
+
+</body>
+
+</html>
